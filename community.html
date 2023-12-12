@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 📋여행 리뷰 게시판📋 </title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="C:\Users\82107\OneDrive\바탕 화면\p프로젝트\Trip\src\style.min.css">
+
+</head>
+
+<body>
+<!-- ! Body -->
+
+<div class="page-flex">
+
+  <div class="main-wrapper">
+    <!-- ! Main nav -->
+    <nav class="main-nav--bg">
+      <div class="nav-user-wrapper">
+        <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
+          <span class="sr-only">My profile</span>
+          <span class="nav-user-img">
+            <picture><source srcset="./img/avatar/avatar-illustrated-02.webp" type="image/webp"><img src="./img/avatar/avatar-illustrated-02.png" alt="User name"></picture>
+          </span>
+        </button>
+        <ul class="users-item-dropdown nav-user-dropdown dropdown">
+          <li><a href="##">
+              <i data-feather="user" aria-hidden="true"></i>
+              <span>Profile</span>
+            </a></li>
+          <li><a href="##">
+              <i data-feather="settings" aria-hidden="true"></i>
+              <span>Account settings</span>
+            </a></li>
+          <li><a class="danger" href="##">
+              <i data-feather="log-out" aria-hidden="true"></i>
+              <span>Log out</span>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+    <!-- ! Main -->
+    <main class="main users chart-page" id="skip-target">
+      <div class="container">
+        <h2 class="main-title">📋여행 리뷰 게시판📋</h2>
+        <div class="row stat-cards">
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon primary">
+                <i data-feather="bar-chart-2" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">동대문 당일치기 여행</p>
+                <p class="stat-cards-info__title">지역 : 서울 중구</p>
+                <p class="stat-cards-info__title"> 총거리 : 2.5km </p>
+                <button> 동대문 플라자 ➡️ 동대문 역사 문화공원 ➡️ 서울 풍물 시장 </button>
+               
+                </div>
+            </article>
+          </div>
+          <div class="post_area">
+			<button type="button" class="btn_good" onclick="setLike();">
+				<span class="ico">좋아요</span>
+				<span class="num" id="conLike"></span>
+			</button>
+			<span class="num_view"><em class="tit">조회수</em><span class="num" id="conRead"></span></span>
+			<span class="rline">
+					<button type="button" class="btn_bookmark" onclick="setFavoContentDetail();"><span class="ico">즐겨찾기</span></button>
+					<button type="button" class="btn_print" onclick="openPrint();" title="새창 열림">
+						<span class="ico" title="새창 열림">인쇄하기</span>
+					</button>
+					<button type="button" class="btn_cos" onclick="myCourseCartDetail('C','12','');">
+						<span class="ico">코스 담기</span>
+					</button>
+						<button type="button" class="btn_sharing" onclick="openShare();">
+                        <span class="ico">공유하기</span>
+                        <span class="num" id="conShare"></span>
+                    </button>
+				</span>
+		</div>
+	</div
+  
+        <div class="row">
+            <div class="users-table table-wrapper">
+              
+                 <!-- 사용자 의사표현 제공 -->
+            <div class="user_expression">
+                <div class="txt">
+                    <strong id="uriTitle">해당 여행지가 마음에 드시나요?</strong>
+                    <p>평가를 해주시면 개인화 추천 시 활용하여 최적의 여행지를 추천해 드리겠습니다.</p>
+                </div>
+                <div class="form">
+                <span class="good">
+                        <input type="radio" id="expressionForm01" name="userExpression">
+                        <label for="expressionForm01" onclick="clickUserExpressionLog(0)">좋아요!</label>
+                </span>
+                    <span class="not">
+                        <input type="radio" id="expressionForm02" name="userExpression">
+                        <label for="expressionForm02" onclick="clickNotLikeExpression()">별로예요</label>
+                </span>
+                </div>
+            </div>
+            <!-- //사용자 의사표현 제공 -->
+
+			<!-- 여행톡 -->
+			<h3 class="blind">여행톡</h3>
+			<div id="replyGo">
+				<div class="replyWrap">
+									
+					<div class="write" id="writeReview">
+						<div class="form">
+							<form name="tform" id="tform">
+								
+								<span class="writeForm"><textarea name="" rows="" id="comment" placeholder="소중한 댓글을 남겨주세요." cols="" onkeydown="commentresize(this);"></textarea></span>
+								 </span>
+                 <button type="button">등록</button> 
+								</div>
+                <p>등록된 댓글이 없습니다.</p>
+              
+							</form>
+						</div>
+					</div>
+					
+    <!-- ! Footer -->
+    <footer class="footer">
+  <div class="container footer--flex">
+    <div class="footer-start">
+      <p>2023 © H팀 </p><br>
+          
+    </div>
+    
+  
+</footer>
+  </div>
+</div>
+<!-- Chart library -->
+<script src="./plugins/chart.min.js"></script>
+<!-- Icons library -->
+<script src="plugins/feather.min.js"></script>
+<!-- Custom scripts -->
+<script src="js/script.js"></script>
+</body>
+
+</html>
