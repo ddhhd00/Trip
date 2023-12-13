@@ -1,43 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>✈️요기서 놀자✈️</title>
+    <!-- 부트스트랩 CSS 링크 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 커스텀 CSS -->
+    <style>
+        body {
+            background-color: #e5e4e485;
+            color: #fff;
+        }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        .navbar {
+            background-color: #001f3f; /* 어두운 네이비에서 조금 더 밝은 색상으로 조정 */
+        }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff !important; /* 글씨 색상을 흰색으로 설정 */
+        }
+
+        .jumbotron {
+            background: url('seoul.jpg') no-repeat center center;
+            background-size: cover;
+            color: #06021d;
+            text-align: center;
+            padding: 100px;
+            margin-bottom: 0;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #333;
+            border: 1px solid #555;
+            color: #fff;
+            transition: transform 0.3s;
+            width: 350px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+        h2.text-center.mb-4 {
+        color: #001f3f; /* 남색(혹은 파랑색)으로 변경 */
+    }
+    .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .jumbotron h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">✈️요기서 놀자✈️</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">마이페이지</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">추천 테마</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">나의 일정</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">여행 리뷰</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign-up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 화면 소개 -->
+    <div class="jumbotron">
+        <h1 class="display-4">여행자님, 어디로 떠나시나요?</h1>
+        <p class="lead">대학생 맞춤 테마 웹사이트입니다. 사용자에게 지역, 인원수, 관심사, 카테고리별 맞춤 여행지를 제공합니다.
+            사용자는 테마여행지와 여행일정을 계획하고 테마별 리뷰게시판을 통해 여러 코스를 공유할 수 있습니다.</p>
+    </div>
+
+    <!-- 국내 지역 포트폴리오 -->
+    <div class="container">
+        <h2 class="text-center mb-4">국내 지역</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">서울</h5>
+                        <p class="card-text">서울의 아름다운 풍경과 문화를 즐겨보세요.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">인천</h5>
+                        <p class="card-text">인천의 해안가와 독특한 맛을 만나보세요.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">목포</h5>
+                        <p class="card-text">목포의 신선한 해산물과 풍부한 자연을 느껴보세요.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">제주</h5>
+                      <p class="card-text">제주의 자연과 특산물을 만나보세요.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">부산</h5>
+                    <p class="card-text">부산의 해안가와 맛집을 즐겨보세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">대구</h5>
+                  <p class="card-text">대구의 역사적인 명소와 현대적인 도시를 즐겨보세요.</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">광주</h5>
+                <p class="card-text">광주의 예술과 문화를 체험해보세요.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">전주</h5>
+              <p class="card-text">전주의 한옥 마을과 전통 음식을 맛보세요.</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">포항</h5>
+            <p class="card-text">포항의 해수욕장과 수목원을 즐겨보세요.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-3">
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">여수</h5>
+          <p class="card-text">여수의 섬과 해상 케이블카를 즐겨보세요.</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 mb-3">
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">강릉</h5>
+          <p class="card-text">강릉의 동해안과 아름다운 산을 탐험하세요.</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 mb-3">
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">울산</h5>
+          <p class="card-text">울산의 산업과 자연을 동시에 즐겨보세요.</p>
+      </div>
+  </div>
+</div>
+    </div>
+
+    <!-- 부트스트랩 JS 및 팝퍼 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
 </html>
+
