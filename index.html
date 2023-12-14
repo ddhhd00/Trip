@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>✈️요기서   놀자✈️</title>
+    <!-- 부트스트랩 CSS 링크 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   
+
+    <!-- 커스텀 CSS -->
+    <style>
+       @font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        body {
+            background-color: #e5e4e485;
+            color: #fff;
+            font-family: 'NPSfontBold', sans-serif;
+        }
+        
+
+        .navbar {
+            background-color: #001f3f; /* 어두운 네이비에서 조금 더 밝은 색상으로 조정 */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff !important; /* 글씨 색상을 흰색으로 설정 */
+        }
+
+        .jumbotron {
+            background: url('seoul.jpg') no-repeat center center;
+            background-size: cover;
+            color: #06021d;
+            text-align: center;
+            padding: 100px;
+            margin-bottom: 0;
+            margin-bottom: 20px;
+            font-family: 'JalnanGothic', sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #333;
+            border: 1px solid #555;
+            color: #fff;
+            transition: transform 0.3s;
+            width: 350px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        h2.text-center.mb-4 {
+            color: #001f3f; /* 남색(혹은 파랑색)으로 변경 */
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .jumbotron h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">✈️요기서 놀자✈️</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">마이페이지</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">추천 테마</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">나의 일정</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">여행 리뷰</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign-up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 화면 소개 -->
+    <div class="jumbotron">
+        <h1 class="display-4">여행자님, 어디로 떠나시나요?</h1>
+        <p class="lead">대학생 맞춤 테마 웹사이트입니다. 사용자에게 지역, 인원수, 관심사, 카테고리별 맞춤 여행지를 제공합니다.
+            사용자는 테마여행지와 여행일정을 계획하고 테마별 리뷰게시판을 통해 여러 코스를 공유할 수 있습니다.</p>
+    </div>
+
+    <!-- 국내 지역 포트폴리오 -->
+    <div class="container">
+        <h2 class="text-center mb-4">국내 지역</h2>
+        <div class ="row">
+            <div class="col-md-4 mb-3">
+                <div class="card" data-toggle="modal" data-target="#gyeonggiModal">
+                    <div class="card-body">
+                        <h5 class="card-title">경기</h5>
+                        <p class="card-text">경기, 아름다운 자연 풍경과 풍부한 문화가 어우러진 곳으로, 다채로운 활동과 특색 있는 음식으로 여행자들을 매료시킵니다</p>
+                    </div>
+                </div>
+            </div>
+        
+      
+            <div class="col-md-4 mb-3">
+                <div class="card" data-toggle="modal" data-target="#seoulModal">
+                    <div class="card-body">
+                        <h5 class="card-title">서울</h5>
+                        <p class="card-text">서울의 아름다운 풍경과 문화를 즐겨보세요.</p>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="col-md-4 mb-3">
+                <div class="card" data-toggle="modal" data-target="#incheonModal">
+                    <div class="card-body">
+                        <h5 class="card-title">인천</h5>
+                        <p class="card-text">인천의 해안가와 독특한 맛을 만나보세요.</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card" data-toggle="modal" data-target="#gangwonModal">
+                    <div class="card-body">
+                        <h5 class="card-title">강원</h5>
+                        <p class="card-text">강원도의 고즈넉한 자연 풍경을 만끽해보세요. </p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 mb-3">
+                <div class="card" data-toggle="modal" data-target="#gyeongnamModal">
+                  <div class="card-body">
+                      <h5 class="card-title">경남</h5>
+                      <p class="card-text">경남의 푸른 바다와 아름다운 산악지대가 어우러진 자연 경관, 풍부한 역사와 전통, 그리고 신선한 해산물로 풍성한 매력을 선사합니다</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card" data-toggle="modal" data-target="#gyeongbukModal">
+                <div class="card-body">
+                    <h5 class="card-title">경북</h5>
+                    <p class="card-text">경북, 고즈넉한 역사 속에 품겨진 아름다운 자연과 현대적인 매력이 어우러진 도시로, 다채로운 경험과 감동이 기다리고 있어요</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    <!-- 경기 모달(팝업) -->
+    <div class="modal fade" id="gyeonggiModal" tabindex="-1" role="dialog" aria-labelledby="gyeonggiModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gyeonggiModalLabel">경기 시 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select id="gyeonggiSelector" class="form-control">
+                        <!-- JavaScript로 동적으로 옵션 추가 -->
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary" onclick="selectGyeonggi()">선택</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 서울 모달 -->
+     <div class="modal fade" id="seoulModal" tabindex="-1" role="dialog" aria-labelledby="seoulModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="seoulModalLabel">서울 구 선택</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <select id="seoulSelector" class="form-control">
+                     <!-- JavaScript로 동적으로 옵션 추가 -->
+                 </select>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                 <button type="button" class="btn btn-primary" onclick="selectSeoul()">선택</button>
+             </div>
+        </div>
+     </div>
+</div>
+<!-- 인천 모달(팝업) -->
+<div class="modal fade" id="incheonModal" tabindex="-1" role="dialog" aria-labelledby="incheonModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="incheonModalLabel">인천 구 선택</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <select id="incheonSelector" class="form-control">
+                    <!-- JavaScript로 동적으로 옵션 추가 -->
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" onclick="selectIncheon()">선택</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 강원도 모달(팝업) -->
+<div class="modal fade" id="gangwonModal" tabindex="-1" role="dialog" aria-labelledby="gangwonModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gangwonModalLabel">강원도 선택</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <select id="gangwonSelector" class="form-control">
+                    <!-- JavaScript로 동적으로 옵션 추가 -->
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" onclick="selectGangwon()">선택</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 경남도 모달(팝업) -->
+<div class="modal fade" id="gyeongnamModal" tabindex="-1" role="dialog" aria-labelledby="gyeongnamModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gyeongnamModalLabel">경남도 선택</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <select id="gyeongnamSelector" class="form-control">
+                    <!-- JavaScript로 동적으로 옵션 추가 -->
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" onclick="selectGyeongnam()">선택</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 경북 모달(팝업) -->
+<div class="modal fade" id="gyeongbukModal" tabindex="-1" role="dialog" aria-labelledby="gyeongbukModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gyeongbukModalLabel">경북 시 선택</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <select id="gyeongbukSelector" class="form-control">
+                    <!-- JavaScript로 동적으로 옵션 추가 -->
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" onclick="selectGyeongbuk()">선택</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- 부트스트랩 JS 및 팝퍼 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // 경기 시 선택할 수 있는 옵션들
+        const gyeonggiCities = [
+            '수원시', '양평군', '고양시', '포천시', '여주시', '안산시', '시흥시', '가평군', '파주시', '성남시', '광주시', '과천시',
+            '안성시', '연천군', '남양주시', '양주시', '김포시', '용인시', '평택시', '광명시', '부천시', '하남시', '안양시', '의정부시',
+            '동두천시', '이천시', '의왕시', '화성시', '구리시', '오산시'
+        ];
+         // 서울 구 선택할 수 있는 옵션들
+         const seoulDistricts = [
+            '종로구', '구로구', '강서구', '송파구', '서대문구', '강남구', '영등포구', '용산구', '중구', '성동구', '마포구', '서초구',
+            '노원구', '광진구', '관악구', '동작구', '도봉구', '금천구', '성북구', '은평구', '강동구', '강북구'
+        ];
+        // 인천 구 선택할 수 있는 옵션들
+const incheonDistricts = [
+    '연수구', '중구', '남동구', '동구', '서구', '미추홀구', '부평구'
+];
+// 강원도 선택할 수 있는 옵션들
+const gangwonCities = [
+    '춘천시'
+];
+
+// 경남도 선택할 수 있는 옵션들
+const gyeongnamCities = [
+    '함양군'
+];
+// 경북 시 선택할 수 있는 옵션들
+const gyeongbukCities = ['경주시', '문경시'];
+
+
+        // 경기 모달이 열릴 때 옵션을 동적으로 추가
+        $('#gyeonggiModal').on('shown.bs.modal', function () {
+            const selector = document.getElementById('gyeonggiSelector');
+
+            // 기존 옵션 제거
+            selector.innerHTML = '';
+
+            // 동적으로 옵션 추가
+            gyeonggiCities.forEach(city => {
+                const option = document.createElement('option');
+                option.text = city;
+                selector.add(option);
+            });
+        });
+        // 서울 모달이 열릴 때 옵션을 동적으로 추가
+        $('#seoulModal').on('shown.bs.modal', function () {
+            const selector = document.getElementById('seoulSelector');
+
+            // 기존 옵션 제거
+            selector.innerHTML = '';
+
+            // 동적으로 옵션 추가
+            seoulDistricts.forEach(district => {
+                const option = document.createElement('option');
+                option.text = district;
+                selector.add(option);
+            });
+        });
+        // 인천 모달이 열릴 때 옵션을 동적으로 추가
+$('#incheonModal').on('shown.bs.modal', function () {
+    const selector = document.getElementById('incheonSelector');
+
+    // 기존 옵션 제거
+    selector.innerHTML = '';
+
+    // 동적으로 옵션 추가
+    incheonDistricts.forEach(district => {
+        const option = document.createElement('option');
+        option.text = district;
+        selector.add(option);
+    });
+});
+// 강원도 모달이 열릴 때 옵션을 동적으로 추가
+$('#gangwonModal').on('shown.bs.modal', function () {
+    const selector = document.getElementById('gangwonSelector');
+
+    // 기존 옵션 제거
+    selector.innerHTML = '';
+
+    // 동적으로 옵션 추가
+    gangwonCities.forEach(city => {
+        const option = document.createElement('option');
+        option.text = city;
+        selector.add(option);
+    });
+});
+
+// 경남도 모달이 열릴 때 옵션을 동적으로 추가
+$('#gyeongnamModal').on('shown.bs.modal', function () {
+    const selector = document.getElementById('gyeongnamSelector');
+
+    // 기존 옵션 제거
+    selector.innerHTML = '';
+
+    // 동적으로 옵션 추가
+    gyeongnamCities.forEach(city => {
+        const option = document.createElement('option');
+        option.text = city;
+        selector.add(option);
+    });
+});
+ // 경북 모달이 열릴 때 옵션을 동적으로 추가
+ $('#gyeongbukModal').on('shown.bs.modal', function () {
+        const selector = document.getElementById('gyeongbukSelector');
+
+        // 기존 옵션 제거
+        selector.innerHTML = '';
+
+        // 동적으로 옵션 추가
+        gyeongbukCities.forEach(city => {
+            const option = document.createElement('option');
+            option.text = city;
+            selector.add(option);
+        });
+    });
+
+
+        // 경기 선택 버튼 클릭 시 실행되는 함수
+        function selectGyeonggi() {
+            const selectedCity = document.getElementById('gyeonggiSelector').value;
+            alert(`선택한 시: ${selectedCity}`);
+            $('#gyeonggiModal').modal('hide'); // 모달 닫기
+        }
+        // 서울 선택 버튼 클릭 시 실행되는 함수
+        function selectSeoul() {
+            const selectedDistrict = document.getElementById('seoulSelector').value;
+            alert(`선택한 구: ${selectedDistrict}`);
+            $('#seoulModal').modal('hide'); // 모달 닫기
+        }
+        // 인천 선택 버튼 클릭 시 실행되는 함수
+function selectIncheon() {
+    const selectedDistrict = document.getElementById('incheonSelector').value;
+    alert(`선택한 구: ${selectedDistrict}`);
+    $('#incheonModal').modal('hide'); // 모달 닫기
+}
+// 강원도 선택 버튼 클릭 시 실행되는 함수
+function selectGangwon() {
+    const selectedCity = document.getElementById('gangwonSelector').value;
+    alert(`선택한 도시: ${selectedCity}`);
+    $('#gangwonModal').modal('hide'); // 모달 닫기
+}
+
+// 경남도 선택 버튼 클릭 시 실행되는 함수
+function selectGyeongnam() {
+    const selectedCity = document.getElementById('gyeongnamSelector').value;
+    alert(`선택한 도시: ${selectedCity}`);
+    $('#gyeongnamModal').modal('hide'); // 모달 닫기
+}
+// 경북 선택 버튼 클릭 시 실행되는 함수
+function selectGyeongbuk() {
+        const selectedCity = document.getElementById('gyeongbukSelector').value;
+        alert(`선택한 시: ${selectedCity}`);
+        $('#gyeongbukModal').modal('hide'); // 모달 닫기
+    }
+</script>
+    </script>
+</body>
+</html>

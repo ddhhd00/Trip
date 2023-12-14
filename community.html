@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 📋여행 리뷰 게시판📋 </title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="C:\Users\82107\OneDrive\바탕 화면\p프로젝트\Trip\src\style.min.css">
+
+</head>
+<style>
+   @font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+  font-family: 'SUITE-Regular', Tahoma, Geneva, Verdana, sans-serif;
+}
+  .main-title {
+    font-size: 28px;
+    background-color: rgb(4, 4, 78);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'JalnanGothic', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+
+  .stat-cards-info {
+    font-size: 22px;
+    
+  }
+
+  .stat-cards-item {
+    width: 420%;
+    display: flex;
+    flex-direction: flex-end;
+    align-items: flex-start;
+  }
+
+  .post_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .btn_good {
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left:1000px;
+  }
+
+  .btn_sharing {
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .stat-cards-info__num,
+  .stat-cards-info__title {
+    font-size: 21px;
+  }
+
+  .stat-cards-info__title {
+    margin-bottom: 10px;
+  }
+
+  .user_expression {
+    /* 사용자 의사표현 스타일 */
+    
+    margin: button 10px;
+    text-align: center;
+    margin-bottom: 20px; 
+    padding: 10px; /* 여백 추가 */
+    font-size: 20px; /* 글자 크기 키우기 */
+    
+  }
+
+  .user_expression .txt {
+    padding: 10px;
+    
+  }
+
+  .user_expression .form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .user_expression .form span {
+    margin-right: 20px;
+  }
+
+  .travel_talk {
+  margin-top: 40px;
+}
+
+.travel_talk h3 {
+  color: rgb(4, 4, 78);
+  font-size: 28px;
+  padding: 10px;
+  text-align: center;
+}
+
+.travel_talk .write {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.travel_talk .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.travel_talk .form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.travel_talk .form button {
+  font-size: 16px;
+  background-color: rgb(4, 4, 78);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.travel_talk .comments {
+  margin-top: 20px;
+}
+
+.travel_talk .comment {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Optional: Style for comment author and timestamp */
+.travel_talk .comment .author {
+  font-weight: bold;
+}
+
+.travel_talk .comment .timestamp {
+  color: #777;
+  font-size: 12px;
+}
+
+ /* Styling for Map Section */
+.map-section {
+  margin-top: 20px;
+}
+
+.map-section iframe {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+</style>
+<body>
+  <!-- ! Body -->
+  <div class="page-flex">
+    <div class="main-wrapper">
+      <main class="main users chart-page" id="skip-target">
+        <div class="container">
+          <!-- 여행 리뷰 게시판 헤더 -->
+          <h2 class="main-title">📋여행 리뷰 게시판📋</h2>
+
+          
+          <div class="row stat-cards">
+            <div class="col-md-6 col-xl-3">
+              <article class="stat-cards-item">
+                <div class="stat-cards-icon primary">
+                  <i data-feather="bar-chart-2" aria-hidden="true"></i>
+                </div>
+                <div class="stat-cards-info">
+                  <p class="stat-cards-info__num">동대문 당일치기 여행</p>
+                  <p class="stat-cards-info__title">지역 : 서울 중구</p>
+                  <p class="stat-cards-info__title"> 총거리 : 2.5km </p><br>
+                  <button> 동대문 플라자 ➡️ 동대문 역사 문화공원 ➡️ 서울 풍물 시장 </button>
+                  <div class="post_area">
+                    <button type="button" class="btn_good" onclick="setLike();">
+                      <span class="ico">좋아요</span>
+                      <span class="num" id="conLike"></span>
+                    </button>
+                    <button type="button" class="btn_sharing" onclick="openShare();">
+                      <span class="ico"> 공유하기</span>
+                      <span class="num" id="conShare"></span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+             
+            </div>
+            
+          </div>
+         <!-- Map Section -->
+<div class="map-section">
+  <iframe
+    width="100%"
+    height="400"
+    frameborder="0"
+    style="border: 0"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.213772965872!2d126.98115331528283!3d37.566641179783935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca0bf97d7d893%3A0x6186fd6ae3756ae1!2sDongdaemun%20Design%20Plaza!5e0!3m2!1sen!2sus!4v1639948495819!5m2!1sen!2sus"
+    allowfullscreen
+  ></iframe>
+</div>
+          <!-- 사용자 의사표현 제공 섹션 -->
+          <div class="user_expression">
+            <div class="txt">
+              <strong id="uriTitle">해당 여행지가 마음에 드시나요?</strong>
+              <p><br>평가를 해주시면 개인화 추천 시 활용하여 최적의 여행지를 추천해 드리겠습니다.</p>
+            </div>
+            <div class="form">
+              <span class="good">
+                <input type="radio" id="expressionForm01" name="userExpression">
+                <label for="expressionForm01" onclick="clickUserExpressionLog(0)">좋아요!</label>
+              </span>
+              <span class="not">
+                <input type="radio" id="expressionForm02" name="userExpression">
+                <label for="expressionForm02" onclick="clickNotLikeExpression()">별로예요</label>
+              </span>
+            </div>
+          </div>
+
+          <!-- 여행톡 섹션 -->
+          <div class="travel_talk">
+            <h3 class="blind">여행톡</h3>
+            <div id="replyGo">
+              <div class="replyWrap">
+                <div class="write" id="writeReview">
+                  <div class="form">
+                   
+                    <form name="tform" id="tform">
+                      <span class="writeForm"><textarea name="" rows="" id="comment" placeholder="소중한 댓글을 남겨주세요." cols="" onkeydown="commentresize(this);"></textarea></span>
+                      <button type="button">등록</button>
+                    </form>
+                    
+                  </div>
+                  <p><br>등록된 댓글이 없습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </main>
+    </div>
+  </div>
+
+  <!-- Chart library -->
+  <script src="./plugins/chart.min.js"></script>
+  <!-- Icons library -->
+  <script src="plugins/feather.min.js"></script>
+  <!-- Custom scripts -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
